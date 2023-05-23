@@ -99,7 +99,7 @@ Se consideran 2 casos para la inserción `al inicio` de una lista:
 - Caso 1: Lista vacía
 <img src="_media/head_insertion_case_1.jpg"
      alt="Head insertion case 1"
-     width="85%"
+     width="95%"
      style="margin: 10px;" />
 
 - Caso 2: Lista no vacía
@@ -122,7 +122,7 @@ Al igual que la inserción al inicio, la inserción `al final` presenta los mism
 - Caso 1: Lista vacía
 <img src="_media/head_insertion_case_1.jpg"
 alt="Head insertion case 1"
-width="85%"
+width="95%"
 style="margin: 10px;" />
 
 - Caso 2: Lista no vacía
