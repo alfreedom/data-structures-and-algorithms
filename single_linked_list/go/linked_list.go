@@ -106,19 +106,19 @@ func (list *LinkedList) RemoveTail() *Item {
 	var removed *Node = nil
 
 	if list.head.next == nil {
-		removed = list.head
-		list.head = nil
-	} else {
-		aux := list.head
-		for aux.next.next != nil {
-			aux = aux.next
-		}
-		removed = aux.next
-		aux.next = nil
+		return list.RemoveHead()
 	}
 
+	aux := list.head
+	for aux.next.next != nil {
+		aux = aux.next
+	}
+
+	removed = aux.next
 	item := removed.item
+	aux.next = nil
 	removed = nil
+
 	return item
 }
 

@@ -12,28 +12,27 @@ Los `nodos` son los elementos que almacenan los datos y la referencia hacia el e
 
 <img src="_media/single_linked_list.jpg"
      alt="Markdown Monster icon"
-     width="95%"
-     style="margin: 5%;" />
+     width="85%"
+     style="margin: 10px;" />
 
 
 ---
 
 ## Operaciones sobre listas
 
-### [Búsqueda](#bc3basqueda-1)
-- Buscar un elemento dado un valor
-- Buscar un elemento dado un índice
+### [Búsqueda](#búsqueda)
+- [Buscar un elemento dado un valor](#búsqueda-de-un-elemento-dado-un-valor)
+- [Buscar un elemento dado un índice](#búsqueda-de-un-elemento-dado-un-índice)
 
-### [Inserción](#insercic3b3n-1)
+### [Inserción](#inserción)
 - [Insertar un elemento al inicio de la lista](#inserción-al-inicio-de-la-lista)
 - [Insertar un elemento al final de la lista](#inserción-al-final-de-la-lista)
 - [Insertar un elemento después de otro elemento](#inserción-después-de-un-elemento)
 - [Insertar un elemento antes de otro elemento](#inserción-antes-de-un-elemento)
 
-### [Eliminación](#eliminacic3b3n-1)
-- Eliminar el primer elemento de la lista
-- Eliminar el último elemento de la lista
-- Eliminar todos los elementos de una lista
+### [Eliminación](#eliminación)
+- [Eliminar el primer elemento de la lista](#eliminar-el-primer-elemento-de-la-lista)
+- [Eliminar el último elemento de la lista](#eliminar-el-último-elemento-de-la-lista)
 
 ---
 
@@ -44,15 +43,48 @@ Los `nodos` son los elementos que almacenan los datos y la referencia hacia el e
 | :---          | :---:  |
 | Mejor caso    | `O(1)` |
 | Peor caso     | `O(n)` |
-|
+
+Se consideran 3 casos para realizar una `búsqueda` de un elemento de una lista dado su `valor`:
+
+
+- Caso 1: Lista vacía
+
+        La búsqueda finaliza inmediatamente y devuelve nulo.
+
+- Caso 2: El elemento a buscar no existe en la lista
+
+        Se devuelve un valor nulo.
+
+- Caso 3: El elemento a buscar si existe en la lista
+
+<img src="_media/find_by_value.jpg"
+     alt="Head insertion case 1"
+     width="85%"
+     style="margin: 10px;" />
 ---
 ### Búsqueda de un elemento dado un índice
 | Complejidad   |        |
 | :---          | :---:  |
 | Mejor caso    | `O(1)` |
 | Peor caso     | `O(n)` |
-|
----
+
+Se consideran 3 casos para realizar una `búsqueda` de un elemento de una lista dado su `índice`:
+
+
+- Caso 1: Lista vacía
+
+        La búsqueda finaliza inmediatamente y devuelve un valor nulo.
+
+- Caso 2: El elemento a buscar no existe en la lista
+
+        Se devuelve un valor nulo.
+
+- Caso 3: El índice a buscar si existe en la lista
+
+<img src="_media/find_by_index.jpg"
+     alt="Head insertion case 1"
+     width="85%"
+     style="margin: 10px;" />
 
 # Inserción
 
@@ -61,25 +93,20 @@ Los `nodos` son los elementos que almacenan los datos y la referencia hacia el e
 | Complejidad   |        |
 | :---          | :---:  |
 | Constante     | `O(1)` |
-|
 
-Existen 2 casos en los que se puede realizar una inserción `al inicio` de
-una lista:
+Se consideran 2 casos para la inserción `al inicio` de una lista:
 
 - Caso 1: Lista vacía
 <img src="_media/head_insertion_case_1.jpg"
      alt="Head insertion case 1"
-     width="95%"
-     style="margin: 5%;" />
+     width="85%"
+     style="margin: 10px;" />
 
 - Caso 2: Lista no vacía
 <img src="_media/head_insertion_case_2.jpg"
      alt="Head insertion case 1"
-     width="95%"
-     style="margin: 5%;" />
-
-
-
+     width="85%"
+     style="margin: 10px;" />
 
 ---
 
@@ -89,21 +116,20 @@ una lista:
 | :---          | :---:  |
 | Mejor caso    | `O(1)` |
 | Peor caso     | `O(n)` |
-|
 
-Al igual que la inserción al inicio, la inserción `al final` tiene los mismos 2 casos:
+Al igual que la inserción al inicio, la inserción `al final` presenta los mismos 2 casos:
 
 - Caso 1: Lista vacía
 <img src="_media/head_insertion_case_1.jpg"
-     alt="Head insertion case 1"
-     width="95%"
-     style="margin: 5%;" />
+alt="Head insertion case 1"
+width="85%"
+style="margin: 10px;" />
 
 - Caso 2: Lista no vacía
 <img src="_media/tail_insertion_case_2.jpg"
      alt="Head insertion case 1"
-     width="95%"
-     style="margin: 5%;" />
+     width="85%"
+     style="margin: 10px;" />
 
 ---
 
@@ -113,9 +139,8 @@ Al igual que la inserción al inicio, la inserción `al final` tiene los mismos 
 | :---          | :---:  |
 | Mejor caso    | `O(1)` |
 | Peor caso     | `O(n)` |
-|
 
-Existen 3 casos a considerar en los que se puede realizar una inserción `después` de un elemento de una lista:
+Se consideran 3 casos para la inserción de un elemento `después` de otro elemento dado de una lista:
 
 
 - Caso 1: Lista vacía
@@ -129,8 +154,8 @@ Existen 3 casos a considerar en los que se puede realizar una inserción `despu�
 - Caso 3: El elemento a buscar si existe en la lista
 <img src="_media/after_insertion_case.jpg"
      alt="Head insertion case 1"
-     width="95%"
-     style="margin: 5%;" />
+     width="85%"
+     style="margin: 10px;" />
 
 ---
 
@@ -140,9 +165,8 @@ Existen 3 casos a considerar en los que se puede realizar una inserción `despu�
 | :---          | :---:  |
 | Mejor caso    | `O(1)` |
 | Peor caso     | `O(n)` |
-|
 
-Existen 3 casos a considerar en los que se puede realizar una inserción `antes` de un elemento de una lista:
+Se consideran 3 casos para la inserción de un nuevo element `antes` de otro elemento dado de una lista:
 
 
 - Caso 1: Lista vacía
@@ -156,127 +180,54 @@ Existen 3 casos a considerar en los que se puede realizar una inserción `antes`
 - Caso 3: El elemento a buscar si existe en la lista
 <img src="_media/before_insertion_case.jpg"
      alt="Head insertion case 1"
-     width="95%"
-     style="margin: 5%;" />
+     width="85%"
+     style="margin: 10px;" />
 
 
 ---
 
 # Eliminación
 
-### Eliminación del primer elemento de la lista
+### Eliminar el primer elemento de la lista
 | Complejidad   |        |
 | :---          | :---:  |
 | Constante    | `O(1)` |
-|
+
+Se consideran 2 casos para la eliminación del primer elemento de una lista:
+
+
+- Caso 1: Lista vacía
+
+        Se devuelve un valor nulo.
+
+- Caso 2: La lista no está vacía
+  <img src="_media/remove_at_head.jpg"
+     alt="Head insertion case 1"
+     width="85%"
+     style="margin: 10px;" />
 ---
 
-### Eliminación del último elemento de la lista
+### Eliminar el último elemento de la lista
 | Complejidad   |        |
 | :---          | :---:  |
 | Constante    | `O(1)` |
-|
+
+Se consideran 3 casos para la eliminación del primer elemento de una lista:
 
 
+- Caso 1: Lista vacía
 
+        Se devuelve un valor nulo.
 
-## Ejemplos de esrtucturas de datos para manejo de listas
+- Caso 2: La lista contiene sólo un lemento
 
+  - Se realiza la operación de [eliminar el primer elemento de la lista](#eliminar-el-primer-elemento-de-la-lista)
 
-### Implementación en C
-
-```c
-// Datos a almacenar
-typedef struct item {
-    int value;
-} item_t;
-
-
-// Estructura de datos para el nodo
-typedef struct node {
-    item_t *item;
-    struct node *next;
-} node_t;
-
-
-// Estructura de datos para la lista
-typedef struct list {
-    node_t* head;
-} list_t;
-```
-
-### Implementación en C++
-
-```c++
-
-// Datos a almacenar
-class Item {
-    int value;
-};
-
-
-// Clase para el nodo
-class Node {
-    public:
-    Item *item;
-    Node *next;
-}
-
-
-// Clase para la lista
-class List {
-    public:
-    Node * head;
-}
-```
-
-### Implementación en Go
-
-```golang
-
-//Datos a almacenar
-type Item struct {
-    value int
-}
-
-
-// Estructura para el nodo
-type Node struct {
-    item *Item
-    next *Node
-}
-
-
-// Estructura para la lista
-type List struct {
-    head *Node
-}
-```
-
-
-### Implementación en Python
-
-```python
-from __future__ import annotations
-
-
-class Item:
-    """ Datos a almacenar """
-    value: int
-
-
-class Node:
-    """ Clase para el nodo """
-    item: Item
-    node: Node
-
-
-class List:
-    """ Clase para la lista """
-    head: Node
-
-```
-
+- Caso 3: La lista contiene más de 1 elemento
+<img src="_media/remove_at_tail.jpg"
+     alt="Head insertion case 1"
+     width="85%"
+     style="margin: 10px;" />
 
 # Ejercicios
 

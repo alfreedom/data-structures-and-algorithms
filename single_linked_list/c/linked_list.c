@@ -103,19 +103,20 @@ item_t* remove_linked_list_item_at_tail(linked_list_t *list) {
 
     // if only one item in list, set head to NULL
     if(!list->head->next) {
-        removed = list->head;
-        list->head = NULL;
-    } else {
-        // search for the previous node of the last node
-        aux = list->head;
-        while(aux->next->next) {
-            aux = aux->next;
-        }
-        removed = aux->next;
-        aux->next = NULL;
+        return remove_linked_list_item_at_head(list);
     }
+
+    // search for the previous node of the last node
+    aux = list->head;
+    while(aux->next->next) {
+        aux = aux->next;
+    }
+
+    removed = aux->next;
     item_t *item = removed->item;
+    aux->next = NULL;
     delete_linked_list_node(removed);
+
     return item;
 }
 

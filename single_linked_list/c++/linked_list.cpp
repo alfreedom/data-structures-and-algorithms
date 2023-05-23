@@ -104,24 +104,24 @@ Item* LinkedList::removeHead() {
 }
 
 Item* LinkedList::removeTail() {
-    Node *removed;
     if(!this->head) {
         return NULL;
     }
 
     if(!this->head->next) {
-        removed = this->head;
-        this->head = NULL;
-    } else {
-        Node *aux = this->head;
-        while(aux->next->next) {
-            aux = aux->next;
-        }
-        removed = aux->next;
-        aux->next = NULL;
+        return this->removeHead();
     }
+
+    Node *aux = this->head;
+    while(aux->next->next) {
+        aux = aux->next;
+    }
+
+    Node *removed = aux->next;
     Item *item = removed->getItem();
+    aux->next = NULL;
     free(removed);
+
     return item;
 }
 

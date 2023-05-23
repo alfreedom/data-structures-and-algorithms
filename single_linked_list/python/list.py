@@ -135,8 +135,7 @@ class LinkedList:
             return None
 
         if self._head.next is None:
-            removed = self._head
-            self._head = None
+            return self.RemoveHead();
         else:
             aux_node = self._head
             while aux_node.next.next is not None:
@@ -146,6 +145,7 @@ class LinkedList:
 
         item = removed.item
         del(removed)
+
         return item
 
     def FindItem(self, item: Item) -> Optional[Item]:
