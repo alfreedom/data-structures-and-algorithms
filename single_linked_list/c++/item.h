@@ -3,10 +3,11 @@
 
 
 class Item {
-    private:
+
+private:
     int value;
 
-    public:
+public:
     Item(int value);
     virtual ~Item();
 

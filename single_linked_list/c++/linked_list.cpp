@@ -99,7 +99,7 @@ Item* LinkedList::removeHead() {
     Node *removed = this->head;
     this->head = removed->next;
     Item* item = removed->getItem();
-    free(removed);
+    delete removed;
     return item;
 }
 
@@ -120,7 +120,7 @@ Item* LinkedList::removeTail() {
     Node *removed = aux->next;
     Item *item = removed->getItem();
     aux->next = NULL;
-    free(removed);
+    delete removed;
 
     return item;
 }

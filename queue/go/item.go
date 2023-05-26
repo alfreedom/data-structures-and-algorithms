@@ -1,4 +1,4 @@
-package single_linked_list
+package queue
 
 type Item struct {
 	value int

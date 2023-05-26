@@ -4,10 +4,11 @@
 #include "item.h"
 
 class Node {
-    private:
+
+private:
     Item *item;
 
-    public:
+public:
     Node* next;
     Node(Item *item);
     virtual ~Node();
@@ -17,10 +18,11 @@ class Node {
 };
 
 class LinkedList{
-    private:
+
+private:
     Node *head;
 
-    public:
+public:
     LinkedList();
     virtual ~LinkedList();
     void print();

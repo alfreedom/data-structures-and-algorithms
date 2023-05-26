@@ -1,6 +1,6 @@
 # Lista Enlazada Simple (Single Linked List)
 
-## Descripción
+## Introducción
 
 En las ciencias de la computación y la programación las listas son unas de las estructuras de datos fundamentales y sencillas de implementar. A menudo son utilizadas como base para otras estructuras de datos más complejas.
 
@@ -11,7 +11,7 @@ Los `nodos` son los elementos que almacenan los datos y la referencia hacia el e
 
 
 <img src="_media/single_linked_list.jpg"
-     alt="Markdown Monster icon"
+     alt="List"
      width="85%"
      style="margin: 10px;" />
 
@@ -57,7 +57,7 @@ Se consideran 3 casos para realizar una `búsqueda` de un elemento de una lista 
 
 - Caso 3: El elemento a buscar si existe en la lista
 
-<img src="_media/find_by_value.jpg"
+  <img src="_media/find_by_value.jpg"
      alt="Head insertion case 1"
      width="85%"
      style="margin: 10px;" />
@@ -81,7 +81,7 @@ Se consideran 3 casos para realizar una `búsqueda` de un elemento de una lista 
 
 - Caso 3: El índice a buscar si existe en la lista
 
-<img src="_media/find_by_index.jpg"
+  <img src="_media/find_by_index.jpg"
      alt="Head insertion case 1"
      width="85%"
      style="margin: 10px;" />
@@ -97,13 +97,15 @@ Se consideran 3 casos para realizar una `búsqueda` de un elemento de una lista 
 Se consideran 2 casos para la inserción `al inicio` de una lista:
 
 - Caso 1: Lista vacía
-<img src="_media/head_insertion_case_1.jpg"
+
+  <img src="_media/head_insertion_case_1.jpg"
      alt="Head insertion case 1"
      width="95%"
      style="margin: 10px;" />
 
 - Caso 2: Lista no vacía
-<img src="_media/head_insertion_case_2.jpg"
+
+  <img src="_media/head_insertion_case_2.jpg"
      alt="Head insertion case 1"
      width="85%"
      style="margin: 10px;" />
@@ -120,14 +122,16 @@ Se consideran 2 casos para la inserción `al inicio` de una lista:
 Al igual que la inserción al inicio, la inserción `al final` presenta los mismos 2 casos:
 
 - Caso 1: Lista vacía
-<img src="_media/head_insertion_case_1.jpg"
-alt="Head insertion case 1"
+
+  <img src="_media/head_insertion_case_1.jpg"
+alt="Tail insertion case 1"
 width="95%"
 style="margin: 10px;" />
 
 - Caso 2: Lista no vacía
-<img src="_media/tail_insertion_case_2.jpg"
-     alt="Head insertion case 1"
+
+  <img src="_media/tail_insertion_case_2.jpg"
+     alt="Tail insertion case 1"
      width="85%"
      style="margin: 10px;" />
 
@@ -152,8 +156,9 @@ Se consideran 3 casos para la inserción de un elemento `después` de otro eleme
         El nuevo elemento no se inserta en la lista.
 
 - Caso 3: El elemento a buscar si existe en la lista
-<img src="_media/after_insertion_case.jpg"
-     alt="Head insertion case 1"
+
+  <img src="_media/after_insertion_case.jpg"
+     alt="Search element"
      width="85%"
      style="margin: 10px;" />
 
@@ -178,8 +183,9 @@ Se consideran 3 casos para la inserción de un nuevo element `antes` de otro ele
         El nuevo elemento no se inserta en la lista.
 
 - Caso 3: El elemento a buscar si existe en la lista
-<img src="_media/before_insertion_case.jpg"
-     alt="Head insertion case 1"
+
+  <img src="_media/before_insertion_case.jpg"
+     alt="After insertion"
      width="85%"
      style="margin: 10px;" />
 
@@ -201,10 +207,11 @@ Se consideran 2 casos para la eliminación del primer elemento de una lista:
         Se devuelve un valor nulo.
 
 - Caso 2: La lista no está vacía
+
   <img src="_media/remove_at_head.jpg"
-     alt="Head insertion case 1"
-     width="85%"
-     style="margin: 10px;" />
+       alt="Head insertion case 1"
+       width="85%"
+       style="margin: 10px;" />
 ---
 
 ### Eliminar el último elemento de la lista
@@ -225,7 +232,7 @@ Se consideran 3 casos para la eliminación del primer elemento de una lista:
 
 - Caso 3: La lista contiene más de 1 elemento
 <img src="_media/remove_at_tail.jpg"
-     alt="Head insertion case 1"
+     alt="Delete last element"
      width="85%"
      style="margin: 10px;" />
 

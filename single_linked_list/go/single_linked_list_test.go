@@ -28,7 +28,7 @@ func TestCanAddItemToHead(t *testing.T) {
 
 	t.Run("test add item to head in empty list", func(t *testing.T) {
 		linked_list, _ := CreateLinkedList()
-		item_to_add, _ := CreateItem(10)
+		item_to_add := CreateItem(10)
 
 		linked_list.AddHead(item_to_add)
 
@@ -40,7 +40,7 @@ func TestCanAddItemToHead(t *testing.T) {
 			t.Errorf("List head must not be 'nil'.")
 		}
 
-		if linked_list.head.item.value != 10 {
+		if linked_list.head.item.value != item_to_add.value {
 			t.Errorf("Head item must be %q, got %q", 10, linked_list.head.item.value)
 		}
 	})
@@ -48,7 +48,7 @@ func TestCanAddItemToHead(t *testing.T) {
 	t.Run("test add item to head in non empty list", func(t *testing.T) {
 		linked_list := create_sample_list(t, 5)
 		initial_len := linked_list.Length()
-		item_to_add, _ := CreateItem(10)
+		item_to_add := CreateItem(10)
 
 		linked_list.AddHead(item_to_add)
 
@@ -56,7 +56,7 @@ func TestCanAddItemToHead(t *testing.T) {
 			t.Errorf("List lenght must be %d, got %d", initial_len+1, linked_list.Length())
 		}
 
-		if linked_list.head.item.value != 10 {
+		if linked_list.head.item.value != item_to_add.value {
 			t.Errorf("Head item must be %d, got %d", 10, linked_list.head.item.value)
 		}
 	})
@@ -65,7 +65,7 @@ func TestCanAddItemToHead(t *testing.T) {
 func TestAddItemToTail(t *testing.T) {
 	t.Run("test add item to tail in empty list", func(t *testing.T) {
 		linked_list, _ := CreateLinkedList()
-		item_to_add, _ := CreateItem(10)
+		item_to_add := CreateItem(10)
 
 		linked_list.AddTail(item_to_add)
 
@@ -73,7 +73,7 @@ func TestAddItemToTail(t *testing.T) {
 			t.Errorf("List head must not be 'nil'.")
 		}
 
-		if linked_list.head.item.value != 10 {
+		if linked_list.head.item.value != item_to_add.value {
 			t.Errorf("Head item must be %q, got %q", 10, linked_list.head.item.value)
 		}
 	})
@@ -81,7 +81,7 @@ func TestAddItemToTail(t *testing.T) {
 	t.Run("test add item to tail in non empty list", func(t *testing.T) {
 		linked_list := create_sample_list(t, 5)
 		initial_len := linked_list.Length()
-		item_to_add, _ := CreateItem(10)
+		item_to_add := CreateItem(10)
 
 		linked_list.AddTail(item_to_add)
 
@@ -98,7 +98,7 @@ func TestAddItemToTail(t *testing.T) {
 func TestAddItemToTailRecursively(t *testing.T) {
 	t.Run("test add item to tail in empty list recursive", func(t *testing.T) {
 		linked_list, _ := CreateLinkedList()
-		item_to_add, _ := CreateItem(10)
+		item_to_add := CreateItem(10)
 
 		linked_list.AddTailRecursive(item_to_add)
 
@@ -106,7 +106,7 @@ func TestAddItemToTailRecursively(t *testing.T) {
 			t.Errorf("List head must not be 'nil'.")
 		}
 
-		if linked_list.head.item.value != 10 {
+		if linked_list.head.item.value != item_to_add.value {
 			t.Errorf("Head item must be %q, got %q", 10, linked_list.head.item.value)
 		}
 	})
@@ -114,7 +114,7 @@ func TestAddItemToTailRecursively(t *testing.T) {
 	t.Run("test add item to tail in non empty list recursive", func(t *testing.T) {
 		linked_list := create_sample_list(t, 5)
 		initial_len := linked_list.Length()
-		item_to_add, _ := CreateItem(10)
+		item_to_add := CreateItem(10)
 
 		linked_list.AddTailRecursive(item_to_add)
 
@@ -215,7 +215,7 @@ func TestCanRemoveAtTail(t *testing.T) {
 func TestCanFindItem(t *testing.T) {
 	t.Run("Test can find item in empty list", func(t *testing.T) {
 		list, _ := CreateLinkedList()
-		item_to_find, _ := CreateItem(10)
+		item_to_find := CreateItem(10)
 
 		item_found := list.FindItem(item_to_find)
 
@@ -226,7 +226,7 @@ func TestCanFindItem(t *testing.T) {
 	})
 	t.Run("Test can find item in non empty list", func(t *testing.T) {
 		list := create_sample_list(t, 5)
-		item_to_find, _ := CreateItem(3)
+		item_to_find := CreateItem(3)
 
 		item_found := list.FindItem(item_to_find)
 
@@ -240,7 +240,7 @@ func TestCanFindItem(t *testing.T) {
 	})
 	t.Run("Test can find non existent item in non empty list", func(t *testing.T) {
 		list := create_sample_list(t, 5)
-		item_to_find, _ := CreateItem(100)
+		item_to_find := CreateItem(100)
 
 		item_found := list.FindItem(item_to_find)
 
@@ -253,7 +253,7 @@ func TestCanFindItem(t *testing.T) {
 func TestCanFindItemRecursively(t *testing.T) {
 	t.Run("Test can find item in empty list recursively", func(t *testing.T) {
 		list, _ := CreateLinkedList()
-		item_to_find, _ := CreateItem(10)
+		item_to_find := CreateItem(10)
 
 		item_found := list.FindItemRecursive(item_to_find)
 
@@ -264,7 +264,7 @@ func TestCanFindItemRecursively(t *testing.T) {
 	})
 	t.Run("Test can find item in non empty list recursively", func(t *testing.T) {
 		list := create_sample_list(t, 5)
-		item_to_find, _ := CreateItem(3)
+		item_to_find := CreateItem(3)
 
 		item_found := list.FindItemRecursive(item_to_find)
 
@@ -278,12 +278,52 @@ func TestCanFindItemRecursively(t *testing.T) {
 	})
 	t.Run("Test can find non existent item in non empty list recursively", func(t *testing.T) {
 		list := create_sample_list(t, 5)
-		item_to_find, _ := CreateItem(100)
+		item_to_find := CreateItem(100)
 
 		item_found := list.FindItemRecursive(item_to_find)
 
 		if item_found != nil {
 			t.Errorf("Found item must be 'nil' if not exists.")
 		}
+	})
+}
+
+func TestString(t *testing.T) {
+	t.Run("Test list string on empty list", func(t *testing.T) {
+		list, _ := CreateLinkedList()
+
+		list_string := list.String()
+
+		if list_string != "[]" {
+			t.Errorf("String of empty list must be '[]', got %s", list_string)
+		}
+	})
+
+	t.Run("Test list string on non empty list", func(t *testing.T) {
+		list, _ := CreateLinkedList()
+		list.AddTail(CreateItem(1))
+		list.AddTail(CreateItem(2))
+		list.AddTail(CreateItem(3))
+		list.AddTail(CreateItem(4))
+
+		list_string := list.String()
+
+		if list_string != "[1, 2, 3, 4]" {
+			t.Errorf("String of empty list must be '[]', got %s", list_string)
+		}
+
+		list.Clear()
+
+		list.AddHead(CreateItem(1))
+		list.AddHead(CreateItem(2))
+		list.AddHead(CreateItem(3))
+		list.AddHead(CreateItem(4))
+
+		list_string = list.String()
+
+		if list_string != "[4, 3, 2, 1]" {
+			t.Errorf("String of empty list must be '[]', got %s", list_string)
+		}
+
 	})
 }

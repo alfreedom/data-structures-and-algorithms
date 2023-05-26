@@ -31,7 +31,7 @@ func CreateLinkedList() (*LinkedList, error) {
 	return list, nil
 }
 
-func creatNode(item *Item) (*Node, error) {
+func createNode(item *Item) (*Node, error) {
 	node := &Node{
 		item: item,
 		next: nil,
@@ -52,7 +52,7 @@ func (list *LinkedList) Length() int {
 }
 
 func (list *LinkedList) AddHead(item *Item) error {
-	new_node, error := creatNode(item)
+	new_node, error := createNode(item)
 	new_node.next = list.head
 	list.head = new_node
 	return error
@@ -69,14 +69,14 @@ func (list *LinkedList) AddTail(item *Item) error {
 		aux_node = aux_node.next
 	}
 
-	new_node, error := creatNode(item)
+	new_node, error := createNode(item)
 	aux_node.next = new_node
 	return error
 }
 
 func add_tail_recursive(node **Node, item *Item) error {
 	if *node == nil {
-		new_node, error := creatNode(item)
+		new_node, error := createNode(item)
 		*node = new_node
 		return error
 	}
@@ -145,4 +145,13 @@ func find_item_recursive(node **Node, item *Item) *Item {
 
 func (list *LinkedList) FindItemRecursive(item *Item) *Item {
 	return find_item_recursive(&list.head, item)
+}
+
+func (list *LinkedList) Clear() {
+	for list.head != nil {
+		item := list.RemoveHead()
+		if item != nil {
+			item = nil
+		}
+	}
 }
