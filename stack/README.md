@@ -60,6 +60,7 @@ La inserción en una pila (**`Push`**) es la misma para los casos de pila vacía
      style="margin: 10px;" />
 
 - Pila No vacía
+
   <img src="_media/stack-push-case-2.jpg"
      alt="Push case 2"
      style="margin: 10px;" />
