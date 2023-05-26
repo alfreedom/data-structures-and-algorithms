@@ -1,6 +1,7 @@
 # data-structures-and-algorithms
-Data structures and algorithms explained and implemented in various languages like Python, Go, C and C++
+Estructuras de datos y algoritmos explicadas e implementas en `Python`, `Go`, `C` y `C++`
 
 
-## Linear data structures
-- [Single linked lis](./single_linked_list/)
+## Estructuras de datos Lineales
+- [Listas Enlazadas Simples (Single Linked Lis)](./single_linked_list/)
+- [Colas (Queue)](./queue/)
