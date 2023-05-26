@@ -54,6 +54,7 @@ apuntador al inicio (`tope`), lo que hace muy sencillo la inserción y eliminaci
 La inserción en una pila (**`Push`**) es la misma para los casos de pila vacía y no vacía:
 
 - Pila vacía
+
   <img src="_media/stack-push-case-1.jpg"
      alt="Push case 1"
      style="margin: 10px;" />
@@ -110,7 +111,7 @@ La consulta en una pila (**`Peek`**) devuelve el valor del tope sin eliminar el 
 | Mejor caso    | `O(1)` |
 | Peor caso     | `O(n)` |
 
-El borrado consiste en eliminar todos los elementos de la cola y establecer los apuntadores de la cabeza y la cola a nulo.
+El borrado consiste en eliminar todos los elementos de la pila y establecer el apuntador de `tope` a nulo.
 
 <img src="_media/stack-empty.jpg"
      alt="Dequeue case 2"
