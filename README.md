@@ -5,3 +5,4 @@ Estructuras de datos y algoritmos explicadas e implementas en `Python`, `Go`, `C
 ## Estructuras de datos Lineales
 - [Listas Enlazadas Simples (Single Linked Lis)](./single_linked_list/)
 - [Colas (Queue)](./queue/)
+- [Pilas (Stack)](./stack/)

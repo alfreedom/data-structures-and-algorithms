@@ -15,7 +15,7 @@ el frente (cabeza) de la lista.
 Esta estructura de datos tambien es llamda FIFO (First In, First Out), ya que el
 primer elemento que ingresa a la cola, es el primero en salir.
 
-Las colas no exiten como estructuras de datos estándar en los lengujes de programación,
+Las colas no existen como estructuras de datos estandar en los lengujes de programación,
 este tipo de estructuras pueden ser representadas mediante el uso de arreglos
 o listas enlazadas.
 
@@ -84,8 +84,7 @@ Se consideran 2 casos para des-encolar un elemento:
 | :---          | :---:  |
 | Constante     | `O(1)` |
 
-La consulta se puede realizar tanto al inicio o al final de la cola, devolviendo
-el dato almacenado sin eliminar el nodo. Al igual que el des-encolado, existen dos
+La consulta se puede realizar tanto al inicio o al final de la cola, devolviendo el dato almacenado sin eliminar el nodo. Al igual que el des-encolado, existen dos
 casos:
 
 - Caso 1: Cola vacía
@@ -113,8 +112,7 @@ casos:
 | Mejor caso    | `O(1)` |
 | Peor caso     | `O(n)` |
 
-El borrado consiste en eliminar todos los elementos de la cola y establecer los apuntadores
-de la cabeza y la cola a nulo.
+El borrado consiste en eliminar todos los elementos de la cola y establecer los apuntadores de la cabeza y la cola a nulo.
 
 <img src="_media/empty_queue.jpg"
      alt="Dequeue case 2"
