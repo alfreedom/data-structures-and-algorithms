@@ -18,7 +18,9 @@ Esta estructura de datos tambien es llamda LIFO (Lasi In, First Out), ya que el 
 <img src="_media/stack-push-representation.jpg"
      alt="Stack data representation"
      style="margin: 10px;" />
+</p>
 
+<p align="center">
 <img src="_media/stack-pop-representation.jpg"
      alt="Stack data representation"
      style="margin: 10px;" />
