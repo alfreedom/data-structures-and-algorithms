@@ -1,7 +1,7 @@
 import pytest
 
-from .stack import Stack
-from .item import Item
+from stack import Stack
+from item import Item
 
 
 @pytest.fixture

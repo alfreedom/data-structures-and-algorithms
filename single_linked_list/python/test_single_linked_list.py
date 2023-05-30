@@ -1,7 +1,7 @@
 import pytest
 
-from .list import Node, LinkedList
-from .item import Item
+from list import Node, LinkedList
+from item import Item
 
 
 @pytest.fixture

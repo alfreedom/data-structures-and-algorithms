@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Optional
 
-from .item import Item
+from item import Item
 
 
 class Node:

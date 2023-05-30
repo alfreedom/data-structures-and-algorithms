@@ -1,7 +1,7 @@
 import pytest
 
-from .queue import Node, Queue, FullQueueError
-from .item import Item
+from queue_dsa import Node, Queue, FullQueueError
+from item import Item
 
 
 def assert_empty_queue(queue: Queue):
