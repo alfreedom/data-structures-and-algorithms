@@ -9,11 +9,12 @@ Una lista enlazada es una colección lineal de elementos creados dinámicamente 
 
 Los `nodos` son los elementos que almacenan los datos y la referencia hacia el elemento siguiente, y la `lista` como tal es una referencia al primer nodo de la colección, también llamado `cabeza`.
 
-
+<p align="center">
 <img src="_media/single_linked_list.jpg"
      alt="List"
      width="85%"
      style="margin: 10px;" />
+</p>
 
 
 ---
@@ -56,11 +57,12 @@ Se consideran 3 casos para realizar una `búsqueda` de un elemento de una lista 
         Se devuelve un valor nulo.
 
 - Caso 3: El elemento a buscar si existe en la lista
-
+<p align="center">
   <img src="_media/find_by_value.jpg"
      alt="Head insertion case 1"
      width="85%"
      style="margin: 10px;" />
+</p>
 ---
 ### Búsqueda de un elemento dado un índice
 | Complejidad   |        |
@@ -80,11 +82,12 @@ Se consideran 3 casos para realizar una `búsqueda` de un elemento de una lista 
         Se devuelve un valor nulo.
 
 - Caso 3: El índice a buscar si existe en la lista
-
+<p align="center">
   <img src="_media/find_by_index.jpg"
      alt="Head insertion case 1"
      width="85%"
      style="margin: 10px;" />
+</p>
 
 # Inserción
 
@@ -97,18 +100,20 @@ Se consideran 3 casos para realizar una `búsqueda` de un elemento de una lista 
 Se consideran 2 casos para la inserción `al inicio` de una lista:
 
 - Caso 1: Lista vacía
-
+<p align="center">
   <img src="_media/head_insertion_case_1.jpg"
      alt="Head insertion case 1"
      width="95%"
      style="margin: 10px;" />
+</p>
 
 - Caso 2: Lista no vacía
-
+<p align="center">
   <img src="_media/head_insertion_case_2.jpg"
      alt="Head insertion case 1"
      width="85%"
      style="margin: 10px;" />
+</p>
 
 ---
 
@@ -122,18 +127,20 @@ Se consideran 2 casos para la inserción `al inicio` de una lista:
 Al igual que la inserción al inicio, la inserción `al final` presenta los mismos 2 casos:
 
 - Caso 1: Lista vacía
-
+<p align="center">
   <img src="_media/head_insertion_case_1.jpg"
 alt="Tail insertion case 1"
 width="95%"
 style="margin: 10px;" />
+</p>
 
 - Caso 2: Lista no vacía
-
+<p align="center">
   <img src="_media/tail_insertion_case_2.jpg"
      alt="Tail insertion case 1"
      width="85%"
      style="margin: 10px;" />
+</p>
 
 ---
 
@@ -156,11 +163,12 @@ Se consideran 3 casos para la inserción de un elemento `después` de otro eleme
         El nuevo elemento no se inserta en la lista.
 
 - Caso 3: El elemento a buscar si existe en la lista
-
+<p align="center">
   <img src="_media/after_insertion_case.jpg"
      alt="Search element"
      width="85%"
      style="margin: 10px;" />
+</p>
 
 ---
 
@@ -183,11 +191,12 @@ Se consideran 3 casos para la inserción de un nuevo element `antes` de otro ele
         El nuevo elemento no se inserta en la lista.
 
 - Caso 3: El elemento a buscar si existe en la lista
-
+<p align="center">
   <img src="_media/before_insertion_case.jpg"
      alt="After insertion"
      width="85%"
      style="margin: 10px;" />
+</p>
 
 
 ---

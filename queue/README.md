@@ -1,8 +1,9 @@
 # Colas (Queues)
-
+<p align="center">
 <img src="_media/queue.jpg"
      alt="Queues"
      style="margin: 10px;" />
+</p>
 
 ## Introducción
 
@@ -26,10 +27,11 @@ ser atendido.
 ---
 
 Al igual que las listas, las colas se representan mediante `nodos`, que almacenan los datos y la referencia hacia el elemento siguiente. La `cola` se conforma de un apuntador al inicio (`head`) y otro al final (`tail`) de la lista para facilitar las operaciónes de inserción y eliminación
-
+<p align="center">
 <img src="_media/queue-representation.jpg"
      alt="Queue data representation"
      style="margin: 10px;" />
+</p>
 
 ---
 
@@ -52,14 +54,18 @@ Al igual que las listas, las colas se representan mediante `nodos`, que almacena
 Se consideran 2 casos para encolar un elemento:
 
 - Caso 1: Cola vacía
+<p align="center">
 <img src="_media/enqueue_case_1.jpg"
      alt="Enqueue case 1"
      style="margin: 10px;" />
+</p>
 
 - Caso 2: Cola no vacía
+<p align="center">
 <img src="_media/enqueue_case_2.jpg"
      alt="Enqueue case 2"
      style="margin: 10px;" />
+</p>
 
 ## Eliminación
 
@@ -74,9 +80,11 @@ Se consideran 2 casos para des-encolar un elemento:
         El proceso termina y devuelve nulo o error.
 
 - Caso 2: Cola no vacía
+<p align="center">
 <img src="_media/dequeue_case_2.jpg"
      alt="Dequeue case 2"
      style="margin: 10px;" />
+</p>
 
 ## Consulta
 
@@ -93,16 +101,18 @@ casos:
 
 - Caso 2:
   - A) Consulta al inicio (head)
-
+     <p align="center">
      <img src="_media/peek_head.jpg"
      alt="Dequeue case 2"
      style="margin: 10px;" />
+     </p>
 
   - B) Consulta al final (tail)
-
+     <p align="center">
      <img src="_media/peek_tail.jpg"
      alt="Dequeue case 2"
      style="margin: 10px;" />
+     </p>
 
 
 ## Borrado
@@ -114,10 +124,12 @@ casos:
 
 El borrado consiste en eliminar todos los elementos de la cola y establecer los apuntadores de la cabeza y la cola a nulo.
 
+<p align="center">
 <img src="_media/empty_queue.jpg"
      alt="Dequeue case 2"
      width="400px"
      style="margin: 10px;" />
+</p>
 
 
 # Ejercicios
