@@ -1,0 +1,6 @@
+[run]
+source = .
+omit =
+    # omit anything in a .local directory anywhere
+    __init__.py
+    test_single_linked_list.py
