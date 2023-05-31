@@ -8,7 +8,7 @@ func create_sample_list(t testing.TB, item_count int) *LinkedList {
 	list, _ := CreateLinkedList()
 
 	for i := 1; i <= item_count; i++ {
-		list.AddHead(&Item{value: i})
+		list.AddHead(&Item{Value: i})
 	}
 	return list
 }
@@ -19,7 +19,7 @@ func TestCanCreateLinkedList(t *testing.T) {
 		t.Errorf("The new linkeds list must not be 'nil'.")
 	}
 
-	if linked_list.head != nil {
+	if linked_list.Head != nil {
 		t.Errorf("The head of empty linked list must be 'nil'.")
 	}
 }
@@ -36,12 +36,12 @@ func TestCanAddItemToHead(t *testing.T) {
 			t.Errorf("List lenght must be %q, got %q", 1, linked_list.Length())
 		}
 
-		if linked_list.head == nil {
+		if linked_list.Head == nil {
 			t.Errorf("List head must not be 'nil'.")
 		}
 
-		if linked_list.head.item.value != item_to_add.value {
-			t.Errorf("Head item must be %q, got %q", 10, linked_list.head.item.value)
+		if linked_list.Head.Item.Value != item_to_add.Value {
+			t.Errorf("Head item must be %q, got %q", 10, linked_list.Head.Item.Value)
 		}
 	})
 
@@ -56,8 +56,8 @@ func TestCanAddItemToHead(t *testing.T) {
 			t.Errorf("List lenght must be %d, got %d", initial_len+1, linked_list.Length())
 		}
 
-		if linked_list.head.item.value != item_to_add.value {
-			t.Errorf("Head item must be %d, got %d", 10, linked_list.head.item.value)
+		if linked_list.Head.Item.Value != item_to_add.Value {
+			t.Errorf("Head item must be %d, got %d", 10, linked_list.Head.Item.Value)
 		}
 	})
 }
@@ -69,12 +69,12 @@ func TestAddItemToTail(t *testing.T) {
 
 		linked_list.AddTail(item_to_add)
 
-		if linked_list.head == nil {
+		if linked_list.Head == nil {
 			t.Errorf("List head must not be 'nil'.")
 		}
 
-		if linked_list.head.item.value != item_to_add.value {
-			t.Errorf("Head item must be %q, got %q", 10, linked_list.head.item.value)
+		if linked_list.Head.Item.Value != item_to_add.Value {
+			t.Errorf("Head item must be %q, got %q", 10, linked_list.Head.Item.Value)
 		}
 	})
 
@@ -89,8 +89,8 @@ func TestAddItemToTail(t *testing.T) {
 			t.Errorf("List lenght must be %d, got %d", initial_len+1, linked_list.Length())
 		}
 
-		if linked_list.head.item.value != 5 {
-			t.Errorf("Head item must be %d, got %d", 10, linked_list.head.item.value)
+		if linked_list.Head.Item.Value != 5 {
+			t.Errorf("Head item must be %d, got %d", 10, linked_list.Head.Item.Value)
 		}
 	})
 }
@@ -102,12 +102,12 @@ func TestAddItemToTailRecursively(t *testing.T) {
 
 		linked_list.AddTailRecursive(item_to_add)
 
-		if linked_list.head == nil {
+		if linked_list.Head == nil {
 			t.Errorf("List head must not be 'nil'.")
 		}
 
-		if linked_list.head.item.value != item_to_add.value {
-			t.Errorf("Head item must be %q, got %q", 10, linked_list.head.item.value)
+		if linked_list.Head.Item.Value != item_to_add.Value {
+			t.Errorf("Head item must be %q, got %q", 10, linked_list.Head.Item.Value)
 		}
 	})
 
@@ -122,8 +122,8 @@ func TestAddItemToTailRecursively(t *testing.T) {
 			t.Errorf("List lenght must be %d, got %d", initial_len+1, linked_list.Length())
 		}
 
-		if linked_list.head.item.value != 5 {
-			t.Errorf("Head item must be %d, got %d", 10, linked_list.head.item.value)
+		if linked_list.Head.Item.Value != 5 {
+			t.Errorf("Head item must be %d, got %d", 10, linked_list.Head.Item.Value)
 		}
 	})
 }
@@ -153,8 +153,8 @@ func TestCanRemoveAtHead(t *testing.T) {
 			t.Errorf("List length must be %d, got %d", 4, list.Length())
 		}
 
-		if removed.value != 5 {
-			t.Errorf("Removed item value must be %d, got %d", 5, removed.value)
+		if removed.Value != 5 {
+			t.Errorf("Removed item value must be %d, got %d", 5, removed.Value)
 		}
 	})
 }
@@ -184,8 +184,8 @@ func TestCanRemoveAtTail(t *testing.T) {
 			t.Errorf("List length must be %d, got %d", 4, list.Length())
 		}
 
-		if removed.value != 1 {
-			t.Errorf("Removed item value must be %d, got %d", 1, removed.value)
+		if removed.Value != 1 {
+			t.Errorf("Removed item value must be %d, got %d", 1, removed.Value)
 		}
 	})
 
@@ -202,11 +202,11 @@ func TestCanRemoveAtTail(t *testing.T) {
 			t.Errorf("List length must be %d, got %d", 0, list.Length())
 		}
 
-		if removed.value != 1 {
-			t.Errorf("Removed item value must be %d, got %d", 1, removed.value)
+		if removed.Value != 1 {
+			t.Errorf("Removed item value must be %d, got %d", 1, removed.Value)
 		}
 
-		if list.head != nil {
+		if list.Head != nil {
 			t.Errorf("List head must be 'nil' after remove all items.")
 		}
 	})
@@ -234,8 +234,8 @@ func TestCanFindItem(t *testing.T) {
 			t.Errorf("Found item must not be 'nil' in non empty list.")
 		}
 
-		if item_to_find.value != item_found.value {
-			t.Errorf("Found item value must be %d, got %d", item_found.value, item_found.value)
+		if item_to_find.Value != item_found.Value {
+			t.Errorf("Found item value must be %d, got %d", item_found.Value, item_found.Value)
 		}
 	})
 	t.Run("Test can find non existent item in non empty list", func(t *testing.T) {
@@ -272,8 +272,8 @@ func TestCanFindItemRecursively(t *testing.T) {
 			t.Errorf("Found item must not be 'nil' in non empty list.")
 		}
 
-		if item_to_find.value != item_found.value {
-			t.Errorf("Found item value must be %d, got %d", item_found.value, item_found.value)
+		if item_to_find.Value != item_found.Value {
+			t.Errorf("Found item value must be %d, got %d", item_found.Value, item_found.Value)
 		}
 	})
 	t.Run("Test can find non existent item in non empty list recursively", func(t *testing.T) {

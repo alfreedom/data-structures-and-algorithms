@@ -1,12 +1,12 @@
 package queue
 
 type Item struct {
-	value int
+	Value int
 }
 
 func CreateItem(value int) *Item {
 	var item *Item = &Item{
-		value: value,
+		Value: value,
 	}
 
 	return item

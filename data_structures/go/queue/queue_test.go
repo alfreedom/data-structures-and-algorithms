@@ -6,15 +6,15 @@ import (
 
 func assert_empty_tail(t testing.TB, queue *Queue) {
 	t.Helper()
-	if queue.head != nil {
+	if queue.Head != nil {
 		t.Errorf("The head of empty queue must be nil")
 	}
 
-	if queue.tail != nil {
+	if queue.Tail != nil {
 		t.Errorf("The tail of empty queue must be nil")
 	}
 
-	if queue.length != 0 {
+	if queue.Length != 0 {
 		t.Errorf("The length of empty queue must be 0")
 	}
 }
@@ -28,7 +28,7 @@ func TestCreateQueue(t *testing.T) {
 			t.Errorf("The queue objects must not be nil")
 		}
 
-		if queue.size != 0 {
+		if queue.Size != 0 {
 			t.Errorf("The size of non sized queue must be 0")
 		}
 
@@ -45,7 +45,7 @@ func TestCreateQueue(t *testing.T) {
 			t.Errorf("The queue objects must not be nil")
 		}
 
-		if queue != nil && queue.size != expected_queue_size {
+		if queue != nil && queue.Size != expected_queue_size {
 			t.Errorf("The size of non sized queue must be 0")
 		}
 
@@ -62,18 +62,18 @@ func TestEnqueue(t *testing.T) {
 
 		queue.Enqueue(CreateItem(4))
 
-		if queue.head == nil {
+		if queue.Head == nil {
 			t.Errorf("Queue head must not be nil")
 		}
 
-		if queue.head != queue.tail {
+		if queue.Head != queue.Tail {
 			t.Errorf("Queue head and tail must be the same")
 		}
-		if queue.length != 1 {
+		if queue.Length != 1 {
 			t.Errorf("Queue length after enqueue must be 1")
 		}
-		if queue.head.item.value != 4 {
-			t.Errorf("Queue inserted value must be 4, got %d", queue.head.item.value)
+		if queue.Head.Item.Value != 4 {
+			t.Errorf("Queue inserted value must be 4, got %d", queue.Head.Item.Value)
 		}
 	})
 
@@ -84,19 +84,19 @@ func TestEnqueue(t *testing.T) {
 		queue.Enqueue(CreateItem(5))
 		queue.Enqueue(CreateItem(6))
 
-		if queue.head == nil {
+		if queue.Head == nil {
 			t.Errorf("Queue head must not be nil")
 		}
 
-		if queue.head == queue.tail {
+		if queue.Head == queue.Tail {
 			t.Errorf("Queue head and tail must be different")
 		}
 
-		if queue.length != 3 {
+		if queue.Length != 3 {
 			t.Errorf("Queue length after enqueue must be 3")
 		}
-		if queue.tail.item.value != 6 {
-			t.Errorf("Queue inserted value must be 6, got %d", queue.tail.item.value)
+		if queue.Tail.Item.Value != 6 {
+			t.Errorf("Queue inserted value must be 6, got %d", queue.Tail.Item.Value)
 		}
 	})
 
@@ -110,20 +110,20 @@ func TestEnqueue(t *testing.T) {
 		queue.Enqueue(CreateItem(8)) // not inserted
 		queue.Enqueue(CreateItem(9)) // not inserted
 
-		if queue.head == nil {
+		if queue.Head == nil {
 			t.Errorf("Queue head must not be nil")
 		}
 
-		if queue.length != 4 {
+		if queue.Length != 4 {
 			t.Errorf("Queue length after enqueue must be 1")
 		}
 
-		if queue.head == queue.tail {
+		if queue.Head == queue.Tail {
 			t.Errorf("Queue head and tail must be different")
 		}
 
-		if queue.tail.item.value != 7 {
-			t.Errorf("Queue inserted value must be 7, got %d", queue.tail.item.value)
+		if queue.Tail.Item.Value != 7 {
+			t.Errorf("Queue inserted value must be 7, got %d", queue.Tail.Item.Value)
 		}
 	})
 }
@@ -156,11 +156,11 @@ func TestDequeue(t *testing.T) {
 			t.Errorf("Dequeued element from an empty string must not be nil")
 		}
 
-		if queue.length != 2 {
-			t.Errorf("Queue lenght must be 2, got %d", queue.length)
+		if queue.Length != 2 {
+			t.Errorf("Queue lenght must be 2, got %d", queue.Length)
 		}
-		if dequeued != nil && dequeued.value != 10 {
-			t.Errorf("Dequeued value must be %d, got %d", 10, dequeued.value)
+		if dequeued != nil && dequeued.Value != 10 {
+			t.Errorf("Dequeued value must be %d, got %d", 10, dequeued.Value)
 		}
 	})
 
@@ -179,12 +179,12 @@ func TestDequeue(t *testing.T) {
 
 			expected_len := len(values) - (ix + 1)
 
-			if dequeued.value != v {
-				t.Errorf("Dequeued value must be %d, got %d", v, dequeued.value)
+			if dequeued.Value != v {
+				t.Errorf("Dequeued value must be %d, got %d", v, dequeued.Value)
 			}
 
-			if queue.length != expected_len {
-				t.Errorf("Lenght after dequeue must be %d, got %d", expected_len, queue.length)
+			if queue.Length != expected_len {
+				t.Errorf("Lenght after dequeue must be %d, got %d", expected_len, queue.Length)
 			}
 		}
 
@@ -224,7 +224,7 @@ func TestPeek(t *testing.T) {
 		queue.Enqueue(CreateItem(30))
 		queue.Enqueue(CreateItem(40))
 
-		expected_length := queue.length
+		expected_length := queue.Length
 
 		peeked := queue.PeekHead()
 
@@ -232,12 +232,12 @@ func TestPeek(t *testing.T) {
 			t.Errorf("Peeked element must not be nil")
 		}
 
-		if queue.length != expected_length {
-			t.Errorf("Queue length must not be changed on peek item, must be %d, got %d", expected_length, queue.length)
+		if queue.Length != expected_length {
+			t.Errorf("Queue length must not be changed on peek item, must be %d, got %d", expected_length, queue.Length)
 		}
 
-		if peeked.value != 55 {
-			t.Errorf("Peekede value must be %d, got %d", 55, peeked.value)
+		if peeked.Value != 55 {
+			t.Errorf("Peekede value must be %d, got %d", 55, peeked.Value)
 		}
 	})
 
@@ -248,7 +248,7 @@ func TestPeek(t *testing.T) {
 		queue.Enqueue(CreateItem(30))
 		queue.Enqueue(CreateItem(40))
 
-		expected_length := queue.length
+		expected_length := queue.Length
 
 		peeked := queue.PeekTail()
 
@@ -256,12 +256,12 @@ func TestPeek(t *testing.T) {
 			t.Errorf("Peeked element must not be nil")
 		}
 
-		if queue.length != expected_length {
-			t.Errorf("Queue length must not be changed on peek item, must be %d, got %d", expected_length, queue.length)
+		if queue.Length != expected_length {
+			t.Errorf("Queue length must not be changed on peek item, must be %d, got %d", expected_length, queue.Length)
 		}
 
-		if peeked.value != 40 {
-			t.Errorf("Peekede value must be %d, got %d", 55, peeked.value)
+		if peeked.Value != 40 {
+			t.Errorf("Peekede value must be %d, got %d", 55, peeked.Value)
 		}
 	})
 }

@@ -1,73 +1,73 @@
 package queue
 
 type Node struct {
-	item *Item
-	next *Node
+	Item *Item
+	Next *Node
 }
 
 type Queue struct {
-	head   *Node
-	tail   *Node
-	size   int
-	length int
+	Head   *Node
+	Tail   *Node
+	Size   int
+	Length int
 }
 
 func CreateNode(item *Item) *Node {
-	return &Node{item: item, next: nil}
+	return &Node{Item: item, Next: nil}
 }
 
 func CreateQueue(size int) *Queue {
-	return &Queue{head: nil, tail: nil, size: size, length: 0}
+	return &Queue{Head: nil, Tail: nil, Size: size, Length: 0}
 }
 
 func (queue *Queue) Enqueue(item *Item) {
-	if queue.size == 0 || queue.length < queue.size {
+	if queue.Size == 0 || queue.Length < queue.Size {
 		new_node := CreateNode(item)
 
-		if queue.tail == nil {
-			queue.head = new_node
+		if queue.Tail == nil {
+			queue.Head = new_node
 		} else {
-			queue.tail.next = new_node
+			queue.Tail.Next = new_node
 		}
-		queue.tail = new_node
-		queue.length++
+		queue.Tail = new_node
+		queue.Length++
 	}
 }
 
 func (queue *Queue) Dequeue() *Item {
-	if queue.tail == nil {
+	if queue.Tail == nil {
 		return nil
 	}
 
-	if queue.tail == queue.head {
-		queue.tail = nil
+	if queue.Tail == queue.Head {
+		queue.Tail = nil
 	}
 
-	removed_node := queue.head
-	queue.head = queue.head.next
-	queue.length--
+	removed_node := queue.Head
+	queue.Head = queue.Head.Next
+	queue.Length--
 
-	return removed_node.item
+	return removed_node.Item
 }
 
 func (queue *Queue) PeekHead() *Item {
-	if queue.head != nil {
-		return queue.head.item
+	if queue.Head != nil {
+		return queue.Head.Item
 	}
 	return nil
 }
 
 func (queue *Queue) PeekTail() *Item {
-	if queue.tail != nil {
-		return queue.tail.item
+	if queue.Tail != nil {
+		return queue.Tail.Item
 	}
 	return nil
 }
 
 func (queue *Queue) Clear() {
-	for queue.head != nil {
-		queue.head = queue.head.next
+	for queue.Head != nil {
+		queue.Head = queue.Head.Next
 	}
-	queue.length = 0
-	queue.tail = nil
+	queue.Length = 0
+	queue.Tail = nil
 }
